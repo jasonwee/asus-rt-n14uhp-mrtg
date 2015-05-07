@@ -34,7 +34,16 @@ def update_data(con, data):
     cur.execute("UPDATE bw_internet SET rx = %s, tx = %s WHERE timestamp = %s", (data.get(""), data.get(""), data.get("")))
     return cur.rowcount
 
+#TODO way overdue :D
+def get_cpu_from_router():
+    pass
+
+#TODO way overdue :D
+def get_mem_stat_from_router():
+    pass
+
 if __name__ == '__main__':
+    con=""
     try:
         #TODO read from config file.
         con = mdb.connect('localhost', 'user', 'test', 'monitor');
