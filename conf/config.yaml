@@ -1,0 +1,30 @@
+# read the following blog in order to give you an idea how to find out the
+# value.
+# http://blog.weetech.co/2014/12/poll-statistics-from-asus-router-rt.html
+
+#router ip address
+router_ip: ''
+
+#router http basic authorization
+router_auth: ''
+
+#router mac address
+router_mac: ''
+
+
+
+######
+# database
+#####
+
+# the hostname/ip for where this database installed.
+db_host: ''
+
+# the database username for read/write.
+db_user: ''
+
+# the password associated with the username
+db_pass: ''
+
+# database name for store and read statistics.
+db_name: ''
