@@ -90,8 +90,9 @@ def get_mem_stat_from_router(config):
     body = buffer.getvalue()
     return body
 
-
 if __name__ == '__main__':
+    #import doctest
+    #doctest.testmod()
     con=""
     try:
         stream = open("../conf/config.yaml", "r")
