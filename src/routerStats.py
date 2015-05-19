@@ -8,6 +8,30 @@ import time
 import yaml
 from StringIO import StringIO
 
+class RouterStats:
+    'to retrieve statistics from router.'
+    totalCount = 0
+
+    def __init__(self, ip):
+        self.ip = ip
+        RouterStats.totalCount += 1
+
+    def __str__(self):
+        return 'router ip %s total count %d' % (self.ip, RouterStats.totalCount)
+
+    def retrieve_mem_stats(self):
+        pass
+
+    def retrieve_network_stats(self):
+        pass
+
+    def retrieve_cpu_stats(self):
+        pass
+
+    def displayRouter(self):
+        print "ip : ", self.ip
+
+
 
 def get_db_version(con):
     cur = con.cursor()
