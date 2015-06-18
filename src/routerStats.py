@@ -64,7 +64,11 @@ def update_data(con, data):
 
 # click 'network Map' then table 'System Status' click tab Status
 def get_cpu_stat_from_router(config):
-    """get cpu statistics in percentage from router."""
+    """
+    get cpu statistics in percentage from router.
+    >>> print "hi"
+    hi
+    """
     time = lambda: int(round(time.time() * 1000))
     headers = ['Accept: text/javascript, application/javascript, application/ecmascript, application/x-ecmascript, */*; q=0.01',
                'Accept-Encoding: gzip, deflate',
