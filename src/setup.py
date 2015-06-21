@@ -19,4 +19,6 @@ setup(name='router_statistics',
       license='Apache version 2.0',
       packages=['router_statistics'],
       include_package_data=False,
-      zip_safe=False)
+      zip_safe=False,
+      test_suite='nose.collector',
+      tests_require=['nose'])
