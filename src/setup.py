@@ -21,4 +21,5 @@ setup(name='router_statistics',
       include_package_data=False,
       zip_safe=False,
       test_suite='nose.collector',
-      tests_require=['nose'])
+      tests_require=['nose'],
+      scripts=['bin/routerStats.py'])
