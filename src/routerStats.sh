@@ -1,9 +1,6 @@
 #!/bin/bash
 
-ROUTER_IP=""
-ROUTER_HWADDR=""
-HTTP_ID=""
-HTTP_BASIC_AUTHORIZATION=""
+. /etc/asus-rt-n14uhp-mrtg/n14uhp.conf
 
 INFO="`curl -s -m 30 'http://'$ROUTER_IP'/update.cgi' -X POST -H "Host: $ROUTER_IP" -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:28.0) Gecko/2010001 Firefox/28.0 Iceweasel/28.0' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Accept-Language: en-US,en;q=0.5' -H 'Accept-Encoding: gzip, deflate' -H 'Referer: http://'$ROUTER_IP'/Main_TrafficMonitor_realtime.asp' -H 'Content-Type: text/plain; charset=UTF-8' -H 'Cookie: dm_install=no; dm_enable=no; hwaddr='$ROUTER_HWADDR'; apps_last=; bw_rtab=WIRELESS0; bw_24tab=WIRELESS0; bw_24refresh=1; daily=1; ymd=1' -H "Authorization: Basic $HTTP_BASIC_AUTHORIZATION" -H 'Connection: keep-alive' -H 'Pragma: no-cache' -H 'Cache-Control: no-cache' --data \"output=netdev&_http_id=$HTTP_ID\"`"
 
@@ -41,18 +38,37 @@ wireless="`echo $INFO | awk -F\" ,\" '{print $4}'`"
 wireless_rx="`echo $wireless | sed -E 's/.*rx:(0x[0-9a-f]+).*/\1/'`"
 wireless_tx="`echo $wireless | sed -E 's/.*tx:(0x[0-9a-f]+).*/\1/'`"
 
+output=$1
 # Final output to MRTG
 #
-#echo $RECEIVE
-#echo $TRANSMIT
-#printf "%d\n" $wired_rx
-#printf "%d\n" $wired_tx
-#printf "%d\n" $bridge_rx
-#printf "%d\n" $bridge_tx
-printf "%d\n" $internet_rx
-printf "%d\n" $internet_tx
-#printf "%d\n" $wireless_rx
-#printf "%d\n" $wireless_tx
-echo 0
-echo 0
-
+if [ "$output" = "-wired" ]; then
+  printf "%d\n" $wired_rx
+  printf "%d\n" $wired_tx
+  echo 0
+  echo 0
+elif [ "$output" = "-bridge" ]; then
+  printf "%d\n" $bridge_rx
+  printf "%d\n" $bridge_tx
+  echo 0
+  echo 0
+elif [ "$output" = "-wireless" ]; then
+  printf "%d\n" $wireless_rx
+  printf "%d\n" $wireless_tx
+  echo 0
+  echo 0
+elif [ "" = "-cpu" ]; then
+  printf "%d\n" $wireless_rx
+  printf "%d\n" $wireless_tx
+  echo 0
+  echo 0
+elif [ "" = "-mem" ]; then
+  printf "%d\n" $wireless_rx
+  printf "%d\n" $wireless_tx
+  echo 0
+  echo 0
+else
+  printf "%d\n" $internet_rx
+  printf "%d\n" $internet_tx
+  echo 0
+  echo 0
+fi
