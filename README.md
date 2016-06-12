@@ -16,3 +16,14 @@ $ python setup.py develop
 how to quickly build a source distribution
 ==========================================
 $ python setup.py sdist
+
+code style
+==========================================
+you can read this link https://www.python.org/dev/peps/pep-0008/ or better yet
+if you are on debian, just install this package using apt-get.
+
+$ sudo apt-get install python-autopep8 pep8 python-pep8 python3-pep8
+
+and then check source file using this command
+
+$ autopep8 -v bin/routerStats.py
