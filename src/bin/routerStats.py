@@ -1,5 +1,9 @@
 #!/usr/bin/env python
 
+
+__version__ = '0.1'
+__author__ = 'Jason Wee'
+
 import yaml
 
 from router_statistics.routerStats import get_cpu_stat_from_router
