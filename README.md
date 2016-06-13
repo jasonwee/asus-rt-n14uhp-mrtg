@@ -7,18 +7,26 @@ and plot in mrtg.
 
 how to test
 ===========
+```sh
 $ python setup.py test
 $ python setup.py nosetests
+```
 
 read more [here](https://nose.readthedocs.io/en/latest/setuptools_integration.html)
 
 how to quickly test in development environment
 ==============================================
+```sh
 $ python setup.py develop
+```
+
 
 how to quickly build a source distribution
 ==========================================
+```sh
 $ python setup.py sdist
+```
+
 
 code style
 ==========================================
