@@ -4,6 +4,15 @@ asus-rt-n14uhp-mrtg
 Poll Asus rt n14uhp hardware statistics such as cpu, ram, network statistics
 and plot in mrtg.
 
+how to setup environment
+========================
+```sh
+$ virtualenv -p python3.4 tmp/ve_asus-rt-n14uhp-mrtg
+$ source tmp/ve_asus-rt-n14uhp-mrtg/bin/activate
+$ pip install -r src/requirements.txt
+$ # when you are done, deactivate the environment
+$ deactivate
+```
 
 how to test
 ===========
