@@ -20,6 +20,10 @@ how to test
 $ python setup.py test
 $ python setup.py nosetests
 ```
+for django test, locate where is manage.py located and cd into the directory.
+```sh
+$ python manage.py test polls
+```
 
 read more [here](https://nose.readthedocs.io/en/latest/setuptools_integration.html)
 
