@@ -40,6 +40,12 @@ how to quickly build a source distribution
 $ python setup.py sdist
 ```
 
+how to install
+==========================================
+```sh
+$ sudo python setup.py install
+```
+
 
 code style
 ==========================================
