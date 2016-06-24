@@ -3,13 +3,13 @@
 # http://blog.weetech.co/2014/12/poll-statistics-from-asus-router-rt.html
 
 #router ip address
-router_ip: ''
+router_ip: '192.168.0.1'
 
 #router http basic authorization
-router_auth: ''
+router_auth: 'YWRtaW46d3BjMTQ5ODg='
 
 #router mac address
-router_mac: ''
+router_mac: '40:16:7E:B9:63:2C'
 
 
 
@@ -18,13 +18,13 @@ router_mac: ''
 #####
 
 # the hostname/ip for where this database installed.
-db_host: ''
+db_host: '192.168.0.2'
 
 # the database username for read/write.
-db_user: ''
+db_user: 'cyzie'
 
 # the password associated with the username
-db_pass: ''
+db_pass: 'x14988'
 
 # database name for store and read statistics.
-db_name: ''
+db_name: 'monitor'

@@ -123,12 +123,12 @@ if __name__ == '__main__':
     #doctest.testmod()
     con=""
     try:
-        stream = open("../conf/config.yaml", "r")
+        stream = open("../../conf/config.yaml", "r")
         config = yaml.load(stream)
         #print config
 
-        cpu_perc = get_cpu_stat_from_router(config)
-        print cpu_perc
+        #cpu_perc = get_cpu_stat_from_router(config)
+        #print cpu_perc
 
         mem_perc = get_mem_stat_from_router(config)
         print mem_perc
