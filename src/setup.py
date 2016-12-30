@@ -6,15 +6,18 @@ def readme():
 
 setup(
       name='router_statistics',
-      
+
+      # https://packaging.python.org/single_source_version/
       version='0.1',
       
       description='retrieve router statistics and display on graph',
       long_description=readme(),
-      
-      classifiers=['Development Status :: 4 - Beta',
+
+      # https://pypi.python.org/pypi?%3Aaction=list_classifiers
+      classifiers=['Development Status :: 5 - Production/Stable',
                    'License :: OSI Approved :: Apache Software License',
                    'Programming Language :: Python :: 2.7',
+                   'Programming Language :: Python :: 3.5',
                    'Topic :: System :: Networking :: Monitoring'],
 
       keywords='asus monitoring graph',
