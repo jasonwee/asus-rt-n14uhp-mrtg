@@ -40,6 +40,12 @@ how to quickly build a source distribution
 $ python setup.py sdist
 ```
 
+how to create a tarball
+=========================================
+```sh
+$ python setup.py bdist_egg
+```
+
 how to install
 ==========================================
 ```sh
